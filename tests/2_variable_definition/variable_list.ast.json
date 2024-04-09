@@ -1,53 +1,60 @@
 {
-  "@class" : "org.easycompiler.ast.Module",
-  "line" : 2,
-  "title" : "program",
+  "@type" : "Module",
   "block" : {
-    "@class" : "org.easycompiler.ast.Block",
+    "@type" : "Block",
+    "statements" : [ {
+      "@type" : "Group",
+      "declarations" : [ {
+        "@type" : "VariableDefinition",
+        "variable" : {
+          "@type" : "Identifier",
+          "title" : "n",
+          "typeName" : "integer",
+          "line" : 2
+        },
+        "init" : null,
+        "line" : 2
+      }, {
+        "@type" : "VariableDefinition",
+        "variable" : {
+          "@type" : "Identifier",
+          "title" : "r",
+          "typeName" : "float",
+          "line" : 2
+        },
+        "init" : null,
+        "line" : 2
+      }, {
+        "@type" : "VariableDefinition",
+        "variable" : {
+          "@type" : "Identifier",
+          "title" : "l",
+          "typeName" : "boolean",
+          "line" : 2
+        },
+        "init" : null,
+        "line" : 2
+      }, {
+        "@type" : "VariableDefinition",
+        "variable" : {
+          "@type" : "Identifier",
+          "title" : "s",
+          "typeName" : "string",
+          "line" : 2
+        },
+        "init" : null,
+        "line" : 2
+      } ],
+      "line" : 2
+    } ],
     "line" : 2,
-    "type" : null,
-    "statements" : [ "java.util.ArrayList", [ {
-      "@class" : "org.easycompiler.ast.Group",
-      "line" : 2,
-      "nodes" : [ "java.util.ArrayList", [ {
-        "@class" : "org.easycompiler.ast.VariableDefinition",
-        "line" : 2,
-        "title" : "n",
-        "type" : {
-          "@class" : "org.easycompiler.type.Integer",
-          "title" : "integer",
-          "type" : "I64"
-        },
-        "initial" : null
-      }, {
-        "@class" : "org.easycompiler.ast.VariableDefinition",
-        "line" : 2,
-        "title" : "r",
-        "type" : {
-          "@class" : "org.easycompiler.type.Float",
-          "title" : "float",
-          "type" : "F64"
-        },
-        "initial" : null
-      }, {
-        "@class" : "org.easycompiler.ast.VariableDefinition",
-        "line" : 2,
-        "title" : "l",
-        "type" : {
-          "@class" : "org.easycompiler.type.Boolean",
-          "title" : "boolean"
-        },
-        "initial" : null
-      }, {
-        "@class" : "org.easycompiler.ast.VariableDefinition",
-        "line" : 2,
-        "title" : "s",
-        "type" : {
-          "@class" : "org.easycompiler.type.Str",
-          "title" : "string"
-        },
-        "initial" : null
-      } ] ]
-    } ] ]
-  }
+    "scope" : {
+      "@type" : "SymbolTable",
+      "variables" : { },
+      "types" : { },
+      "functions" : { }
+    }
+  },
+  "line" : 2,
+  "scope" : null
 }

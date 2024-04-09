@@ -1,19 +1,21 @@
 {
-  "@class" : "org.easycompiler.ast.Module",
-  "line" : 1,
-  "title" : "program",
+  "@type" : "Module",
   "block" : {
-    "@class" : "org.easycompiler.ast.Block",
+    "@type" : "Block",
+    "statements" : [ {
+      "@type" : "Value",
+      "value" : "this is a string",
+      "typeName" : "String",
+      "line" : 1
+    } ],
     "line" : 1,
-    "type" : null,
-    "statements" : [ "java.util.ArrayList", [ {
-      "@class" : "org.easycompiler.ast.Value",
-      "line" : 1,
-      "type" : {
-        "@class" : "org.easycompiler.type.Str",
-        "title" : "string"
-      },
-      "value" : "this is a string"
-    } ] ]
-  }
+    "scope" : {
+      "@type" : "SymbolTable",
+      "variables" : { },
+      "types" : { },
+      "functions" : { }
+    }
+  },
+  "line" : 1,
+  "scope" : null
 }

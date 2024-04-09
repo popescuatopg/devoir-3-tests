@@ -1,324 +1,299 @@
 {
-  "@class" : "org.easycompiler.ast.Module",
-  "line" : 3,
-  "title" : "program",
+  "@type" : "Module",
   "block" : {
-    "@class" : "org.easycompiler.ast.Block",
-    "line" : 3,
-    "type" : null,
-    "statements" : [ "java.util.ArrayList", [ {
-      "@class" : "org.easycompiler.ast.Group",
-      "line" : 3,
-      "nodes" : [ "java.util.ArrayList", [ {
-        "@class" : "org.easycompiler.ast.VariableDefinition",
-        "line" : 3,
-        "title" : "n",
-        "type" : null,
-        "initial" : {
-          "@class" : "org.easycompiler.ast.Value",
-          "line" : 3,
-          "type" : {
-            "@class" : "org.easycompiler.type.Integer",
-            "title" : "integer",
-            "type" : "I64"
-          },
-          "value" : "2"
-        }
-      } ] ]
+    "@type" : "Block",
+    "statements" : [ {
+      "@type" : "Group",
+      "declarations" : [ {
+        "@type" : "VariableDefinition",
+        "variable" : {
+          "@type" : "Identifier",
+          "title" : "n",
+          "typeName" : null,
+          "line" : 3
+        },
+        "init" : {
+          "@type" : "Value",
+          "value" : "2",
+          "typeName" : "I64",
+          "line" : 3
+        },
+        "line" : 3
+      } ],
+      "line" : 3
     }, {
-      "@class" : "org.easycompiler.ast.Loop",
-      "line" : 5,
-      "type" : null,
+      "@type" : "ForLoop",
       "init" : {
-        "@class" : "org.easycompiler.ast.Block",
-        "line" : 5,
-        "type" : null,
-        "statements" : [ "java.util.ArrayList", [ {
-          "@class" : "org.easycompiler.ast.Assignment",
-          "line" : 5,
-          "to" : {
-            "@class" : "org.easycompiler.ast.Identifier",
-            "line" : 5,
-            "type" : null,
-            "title" : "n"
-          },
-          "from" : {
-            "@class" : "org.easycompiler.ast.Value",
-            "line" : 5,
-            "type" : {
-              "@class" : "org.easycompiler.type.Integer",
-              "title" : "integer",
-              "type" : "I64"
-            },
-            "value" : "2"
-          }
-        } ] ]
+        "@type" : "VariableDefinition",
+        "variable" : {
+          "@type" : "Identifier",
+          "title" : "n",
+          "typeName" : null,
+          "line" : 5
+        },
+        "init" : {
+          "@type" : "Value",
+          "value" : "2",
+          "typeName" : "I64",
+          "line" : 5
+        },
+        "line" : 5
       },
-      "condition" : {
-        "@class" : "org.easycompiler.ast.BinaryExpression",
-        "line" : 5,
-        "type" : null,
-        "left" : {
-          "@class" : "org.easycompiler.ast.Identifier",
-          "line" : 5,
-          "type" : null,
-          "title" : "n"
-        },
-        "right" : {
-          "@class" : "org.easycompiler.ast.Value",
-          "line" : 5,
-          "type" : {
-            "@class" : "org.easycompiler.type.Integer",
-            "title" : "integer",
-            "type" : "I64"
+      "loop" : {
+        "@type" : "Loop",
+        "condition" : {
+          "@type" : "BinaryExpression",
+          "left" : {
+            "@type" : "Identifier",
+            "title" : "n",
+            "typeName" : null,
+            "line" : 5
           },
-          "value" : "1000"
+          "right" : {
+            "@type" : "Value",
+            "value" : "1000",
+            "typeName" : "I64",
+            "line" : 5
+          },
+          "op" : "LT",
+          "typeName" : null,
+          "line" : 5
         },
-        "op" : "LT"
+        "statement" : {
+          "@type" : "Block",
+          "statements" : [ {
+            "@type" : "FunctionCall",
+            "function" : {
+              "@type" : "Identifier",
+              "title" : "_write",
+              "typeName" : null,
+              "line" : 6
+            },
+            "parameters" : [ {
+              "@type" : "Identifier",
+              "title" : "n",
+              "typeName" : null,
+              "line" : 6
+            } ],
+            "typeName" : null,
+            "line" : 6
+          } ],
+          "line" : 6,
+          "scope" : {
+            "@type" : "SymbolTable",
+            "variables" : { },
+            "types" : { },
+            "functions" : { }
+          }
+        },
+        "evaluation" : "BEFORE",
+        "line" : 5
       },
       "steps" : {
-        "@class" : "org.easycompiler.ast.Block",
-        "line" : 5,
-        "type" : null,
-        "statements" : [ "java.util.ArrayList", [ {
-          "@class" : "org.easycompiler.ast.Assignment",
-          "line" : 5,
-          "to" : {
-            "@class" : "org.easycompiler.ast.Identifier",
-            "line" : 5,
-            "type" : null,
-            "title" : "n"
+        "@type" : "Assignment",
+        "to" : {
+          "@type" : "Identifier",
+          "title" : "n",
+          "typeName" : null,
+          "line" : 5
+        },
+        "from" : {
+          "@type" : "BinaryExpression",
+          "left" : {
+            "@type" : "Identifier",
+            "title" : "n",
+            "typeName" : null,
+            "line" : 5
           },
-          "from" : {
-            "@class" : "org.easycompiler.ast.BinaryExpression",
-            "line" : 5,
-            "type" : null,
-            "left" : {
-              "@class" : "org.easycompiler.ast.Identifier",
-              "line" : 5,
-              "type" : null,
-              "title" : "n"
-            },
-            "right" : {
-              "@class" : "org.easycompiler.ast.Value",
-              "line" : 5,
-              "type" : {
-                "@class" : "org.easycompiler.type.Integer",
-                "title" : "integer",
-                "type" : "I64"
-              },
-              "value" : "1"
-            },
-            "op" : "ADD"
-          }
-        } ] ]
-      },
-      "statements" : {
-        "@class" : "org.easycompiler.ast.Block",
-        "line" : 6,
-        "type" : null,
-        "statements" : [ "java.util.ArrayList", [ {
-          "@class" : "org.easycompiler.ast.FunctionCall",
-          "line" : 6,
-          "type" : null,
-          "function_name" : {
-            "@class" : "org.easycompiler.ast.Identifier",
-            "line" : 6,
-            "type" : null,
-            "title" : "_write"
+          "right" : {
+            "@type" : "Value",
+            "value" : "1",
+            "typeName" : "I64",
+            "line" : 5
           },
-          "arguments" : [ "java.util.ArrayList", [ {
-            "@class" : "org.easycompiler.ast.Identifier",
-            "line" : 6,
-            "type" : null,
-            "title" : "n"
-          } ] ]
-        } ] ]
+          "op" : "ADD",
+          "typeName" : null,
+          "line" : 5
+        },
+        "line" : 5
       },
-      "evaluation" : "BEFORE"
+      "line" : 5
     }, {
-      "@class" : "org.easycompiler.ast.Loop",
-      "line" : 9,
-      "type" : null,
-      "init" : null,
+      "@type" : "Loop",
       "condition" : {
-        "@class" : "org.easycompiler.ast.BinaryExpression",
-        "line" : 9,
-        "type" : null,
+        "@type" : "BinaryExpression",
         "left" : {
-          "@class" : "org.easycompiler.ast.Identifier",
-          "line" : 9,
-          "type" : null,
-          "title" : "n"
+          "@type" : "Identifier",
+          "title" : "n",
+          "typeName" : null,
+          "line" : 9
         },
         "right" : {
-          "@class" : "org.easycompiler.ast.Value",
-          "line" : 9,
-          "type" : {
-            "@class" : "org.easycompiler.type.Integer",
-            "title" : "integer",
-            "type" : "I64"
-          },
-          "value" : "1000"
+          "@type" : "Value",
+          "value" : "1000",
+          "typeName" : "I64",
+          "line" : 9
         },
-        "op" : "LT"
+        "op" : "LT",
+        "typeName" : null,
+        "line" : 9
       },
-      "steps" : null,
-      "statements" : {
-        "@class" : "org.easycompiler.ast.Block",
-        "line" : 10,
-        "type" : null,
-        "statements" : [ "java.util.ArrayList", [ {
-          "@class" : "org.easycompiler.ast.FunctionCall",
-          "line" : 10,
-          "type" : null,
-          "function_name" : {
-            "@class" : "org.easycompiler.ast.Identifier",
-            "line" : 10,
-            "type" : null,
-            "title" : "_write"
+      "statement" : {
+        "@type" : "Block",
+        "statements" : [ {
+          "@type" : "FunctionCall",
+          "function" : {
+            "@type" : "Identifier",
+            "title" : "_write",
+            "typeName" : null,
+            "line" : 10
           },
-          "arguments" : [ "java.util.ArrayList", [ {
-            "@class" : "org.easycompiler.ast.Identifier",
-            "line" : 10,
-            "type" : null,
-            "title" : "n"
-          } ] ]
+          "parameters" : [ {
+            "@type" : "Identifier",
+            "title" : "n",
+            "typeName" : null,
+            "line" : 10
+          } ],
+          "typeName" : null,
+          "line" : 10
         }, {
-          "@class" : "org.easycompiler.ast.Assignment",
-          "line" : 11,
+          "@type" : "Assignment",
           "to" : {
-            "@class" : "org.easycompiler.ast.Identifier",
-            "line" : 11,
-            "type" : null,
-            "title" : "n"
+            "@type" : "Identifier",
+            "title" : "n",
+            "typeName" : null,
+            "line" : 11
           },
           "from" : {
-            "@class" : "org.easycompiler.ast.BinaryExpression",
-            "line" : 11,
-            "type" : null,
+            "@type" : "BinaryExpression",
             "left" : {
-              "@class" : "org.easycompiler.ast.Identifier",
-              "line" : 11,
-              "type" : null,
-              "title" : "n"
+              "@type" : "Identifier",
+              "title" : "n",
+              "typeName" : null,
+              "line" : 11
             },
             "right" : {
-              "@class" : "org.easycompiler.ast.Value",
-              "line" : 11,
-              "type" : {
-                "@class" : "org.easycompiler.type.Integer",
-                "title" : "integer",
-                "type" : "I64"
-              },
-              "value" : "2"
+              "@type" : "Value",
+              "value" : "2",
+              "typeName" : "I64",
+              "line" : 11
             },
-            "op" : "ADD"
-          }
-        } ] ]
+            "op" : "ADD",
+            "typeName" : null,
+            "line" : 11
+          },
+          "line" : 11
+        } ],
+        "line" : 10,
+        "scope" : {
+          "@type" : "SymbolTable",
+          "variables" : { },
+          "types" : { },
+          "functions" : { }
+        }
       },
-      "evaluation" : "BEFORE"
+      "evaluation" : "BEFORE",
+      "line" : 9
     }, {
-      "@class" : "org.easycompiler.ast.Assignment",
-      "line" : 14,
+      "@type" : "Assignment",
       "to" : {
-        "@class" : "org.easycompiler.ast.Identifier",
-        "line" : 14,
-        "type" : null,
-        "title" : "n"
+        "@type" : "Identifier",
+        "title" : "n",
+        "typeName" : null,
+        "line" : 14
       },
       "from" : {
-        "@class" : "org.easycompiler.ast.Value",
-        "line" : 14,
-        "type" : {
-          "@class" : "org.easycompiler.type.Integer",
-          "title" : "integer",
-          "type" : "I64"
-        },
-        "value" : "2"
-      }
+        "@type" : "Value",
+        "value" : "2",
+        "typeName" : "I64",
+        "line" : 14
+      },
+      "line" : 14
     }, {
-      "@class" : "org.easycompiler.ast.Loop",
-      "line" : 16,
-      "type" : null,
-      "init" : null,
+      "@type" : "Loop",
       "condition" : {
-        "@class" : "org.easycompiler.ast.BinaryExpression",
-        "line" : 19,
-        "type" : null,
+        "@type" : "BinaryExpression",
         "left" : {
-          "@class" : "org.easycompiler.ast.Identifier",
-          "line" : 19,
-          "type" : null,
-          "title" : "n"
+          "@type" : "Identifier",
+          "title" : "n",
+          "typeName" : null,
+          "line" : 19
         },
         "right" : {
-          "@class" : "org.easycompiler.ast.Value",
-          "line" : 19,
-          "type" : {
-            "@class" : "org.easycompiler.type.Integer",
-            "title" : "integer",
-            "type" : "I64"
-          },
-          "value" : "1000"
+          "@type" : "Value",
+          "value" : "1000",
+          "typeName" : "I64",
+          "line" : 19
         },
-        "op" : "LT"
+        "op" : "LT",
+        "typeName" : null,
+        "line" : 19
       },
-      "steps" : null,
-      "statements" : {
-        "@class" : "org.easycompiler.ast.Block",
-        "line" : 17,
-        "type" : null,
-        "statements" : [ "java.util.ArrayList", [ {
-          "@class" : "org.easycompiler.ast.FunctionCall",
-          "line" : 17,
-          "type" : null,
-          "function_name" : {
-            "@class" : "org.easycompiler.ast.Identifier",
-            "line" : 17,
-            "type" : null,
-            "title" : "_write"
+      "statement" : {
+        "@type" : "Block",
+        "statements" : [ {
+          "@type" : "FunctionCall",
+          "function" : {
+            "@type" : "Identifier",
+            "title" : "_write",
+            "typeName" : null,
+            "line" : 17
           },
-          "arguments" : [ "java.util.ArrayList", [ {
-            "@class" : "org.easycompiler.ast.Identifier",
-            "line" : 17,
-            "type" : null,
-            "title" : "n"
-          } ] ]
+          "parameters" : [ {
+            "@type" : "Identifier",
+            "title" : "n",
+            "typeName" : null,
+            "line" : 17
+          } ],
+          "typeName" : null,
+          "line" : 17
         }, {
-          "@class" : "org.easycompiler.ast.Assignment",
-          "line" : 18,
+          "@type" : "Assignment",
           "to" : {
-            "@class" : "org.easycompiler.ast.Identifier",
-            "line" : 18,
-            "type" : null,
-            "title" : "n"
+            "@type" : "Identifier",
+            "title" : "n",
+            "typeName" : null,
+            "line" : 18
           },
           "from" : {
-            "@class" : "org.easycompiler.ast.BinaryExpression",
-            "line" : 18,
-            "type" : null,
+            "@type" : "BinaryExpression",
             "left" : {
-              "@class" : "org.easycompiler.ast.Identifier",
-              "line" : 18,
-              "type" : null,
-              "title" : "n"
+              "@type" : "Identifier",
+              "title" : "n",
+              "typeName" : null,
+              "line" : 18
             },
             "right" : {
-              "@class" : "org.easycompiler.ast.Value",
-              "line" : 18,
-              "type" : {
-                "@class" : "org.easycompiler.type.Integer",
-                "title" : "integer",
-                "type" : "I64"
-              },
-              "value" : "2"
+              "@type" : "Value",
+              "value" : "2",
+              "typeName" : "I64",
+              "line" : 18
             },
-            "op" : "ADD"
-          }
-        } ] ]
+            "op" : "ADD",
+            "typeName" : null,
+            "line" : 18
+          },
+          "line" : 18
+        } ],
+        "line" : 17,
+        "scope" : {
+          "@type" : "SymbolTable",
+          "variables" : { },
+          "types" : { },
+          "functions" : { }
+        }
       },
-      "evaluation" : "AFTER"
-    } ] ]
-  }
+      "evaluation" : "AFTER",
+      "line" : 16
+    } ],
+    "line" : 3,
+    "scope" : {
+      "@type" : "SymbolTable",
+      "variables" : { },
+      "types" : { },
+      "functions" : { }
+    }
+  },
+  "line" : 3,
+  "scope" : null
 }

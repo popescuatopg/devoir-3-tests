@@ -1,22 +1,27 @@
 {
-  "@class" : "org.easycompiler.ast.Module",
-  "line" : 3,
-  "title" : "program",
+  "@type" : "Module",
   "block" : {
-    "@class" : "org.easycompiler.ast.Block",
-    "line" : 3,
-    "type" : null,
-    "statements" : [ "java.util.ArrayList", [ {
-      "@class" : "org.easycompiler.ast.FunctionCall",
-      "line" : 3,
-      "type" : null,
-      "function_name" : {
-        "@class" : "org.easycompiler.ast.Identifier",
-        "line" : 3,
-        "type" : null,
-        "title" : "_getpid"
+    "@type" : "Block",
+    "statements" : [ {
+      "@type" : "FunctionCall",
+      "function" : {
+        "@type" : "Identifier",
+        "title" : "_getpid",
+        "typeName" : null,
+        "line" : 3
       },
-      "arguments" : [ "java.util.ArrayList", [ ] ]
-    } ] ]
-  }
+      "parameters" : [ ],
+      "typeName" : null,
+      "line" : 3
+    } ],
+    "line" : 3,
+    "scope" : {
+      "@type" : "SymbolTable",
+      "variables" : { },
+      "types" : { },
+      "functions" : { }
+    }
+  },
+  "line" : 3,
+  "scope" : null
 }

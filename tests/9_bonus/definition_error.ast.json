@@ -1,17 +1,6 @@
-{
-  "@class" : "org.easycompiler.ast.Errors",
-  "line" : 0,
-  "errorList" : [ "java.util.ArrayList", [ {
-    "@class" : "org.easycompiler.ast.Error",
-    "line" : 2,
-    "id" : "Syntax Error",
-    "charPosition" : 17,
-    "msg" : "no viable alternative at input 'variable<'"
-  }, {
-    "@class" : "org.easycompiler.ast.Error",
-    "line" : 2,
-    "id" : "Syntax Error",
-    "charPosition" : 26,
-    "msg" : "mismatched input ';' expecting 'array'"
-  } ] ]
-}
+[ {
+  "id" : "Syntax Error",
+  "line" : 2,
+  "charPosition" : 17,
+  "msg" : "no viable alternative at input 'variable<'"
+} ]

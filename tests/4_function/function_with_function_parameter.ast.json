@@ -1,110 +1,96 @@
 {
-  "@class" : "org.easycompiler.ast.Module",
-  "line" : 3,
-  "title" : "program",
+  "@type" : "Module",
   "block" : {
-    "@class" : "org.easycompiler.ast.Block",
-    "line" : 3,
-    "type" : null,
-    "statements" : [ "java.util.ArrayList", [ {
-      "@class" : "org.easycompiler.ast.FunctionCall",
-      "line" : 3,
-      "type" : null,
-      "function_name" : {
-        "@class" : "org.easycompiler.ast.Identifier",
-        "line" : 3,
-        "type" : null,
-        "title" : "_print"
+    "@type" : "Block",
+    "statements" : [ {
+      "@type" : "FunctionCall",
+      "function" : {
+        "@type" : "Identifier",
+        "title" : "_print",
+        "typeName" : null,
+        "line" : 3
       },
-      "arguments" : [ "java.util.ArrayList", [ {
-        "@class" : "org.easycompiler.ast.BinaryExpression",
-        "line" : 3,
-        "type" : null,
+      "parameters" : [ {
+        "@type" : "BinaryExpression",
         "left" : {
-          "@class" : "org.easycompiler.ast.BinaryExpression",
-          "line" : 3,
-          "type" : null,
+          "@type" : "BinaryExpression",
           "left" : {
-            "@class" : "org.easycompiler.ast.BinaryExpression",
-            "line" : 3,
-            "type" : null,
+            "@type" : "BinaryExpression",
             "left" : {
-              "@class" : "org.easycompiler.ast.BinaryExpression",
-              "line" : 3,
-              "type" : null,
+              "@type" : "BinaryExpression",
               "left" : {
-                "@class" : "org.easycompiler.ast.Value",
-                "line" : 3,
-                "type" : {
-                  "@class" : "org.easycompiler.type.Str",
-                  "title" : "string"
-                },
-                "value" : "text"
+                "@type" : "Value",
+                "value" : "text",
+                "typeName" : "String",
+                "line" : 3
               },
               "right" : {
-                "@class" : "org.easycompiler.ast.Value",
-                "line" : 3,
-                "type" : {
-                  "@class" : "org.easycompiler.type.Str",
-                  "title" : "string"
-                },
-                "value" : " "
+                "@type" : "Value",
+                "value" : " ",
+                "typeName" : "Symbol",
+                "line" : 3
               },
-              "op" : "ADD"
+              "op" : "ADD",
+              "typeName" : null,
+              "line" : 3
             },
             "right" : {
-              "@class" : "org.easycompiler.ast.Value",
-              "line" : 3,
-              "type" : {
-                "@class" : "org.easycompiler.type.Str",
-                "title" : "string"
-              },
-              "value" : "to"
+              "@type" : "Value",
+              "value" : "to",
+              "typeName" : "String",
+              "line" : 3
             },
-            "op" : "ADD"
+            "op" : "ADD",
+            "typeName" : null,
+            "line" : 3
           },
           "right" : {
-            "@class" : "org.easycompiler.ast.Value",
-            "line" : 3,
-            "type" : {
-              "@class" : "org.easycompiler.type.Str",
-              "title" : "string"
-            },
-            "value" : " "
+            "@type" : "Value",
+            "value" : " ",
+            "typeName" : "Symbol",
+            "line" : 3
           },
-          "op" : "ADD"
+          "op" : "ADD",
+          "typeName" : null,
+          "line" : 3
         },
         "right" : {
-          "@class" : "org.easycompiler.ast.Value",
-          "line" : 3,
-          "type" : {
-            "@class" : "org.easycompiler.type.Str",
-            "title" : "string"
-          },
-          "value" : "write"
+          "@type" : "Value",
+          "value" : "write",
+          "typeName" : "String",
+          "line" : 3
         },
-        "op" : "ADD"
+        "op" : "ADD",
+        "typeName" : null,
+        "line" : 3
       }, {
-        "@class" : "org.easycompiler.ast.FunctionCall",
-        "line" : 3,
-        "type" : null,
-        "function_name" : {
-          "@class" : "org.easycompiler.ast.Identifier",
-          "line" : 3,
-          "type" : null,
-          "title" : "math"
+        "@type" : "FunctionCall",
+        "function" : {
+          "@type" : "Identifier",
+          "title" : "math",
+          "typeName" : null,
+          "line" : 3
         },
-        "arguments" : [ "java.util.ArrayList", [ {
-          "@class" : "org.easycompiler.ast.Value",
-          "line" : 3,
-          "type" : {
-            "@class" : "org.easycompiler.type.Integer",
-            "title" : "integer",
-            "type" : "I64"
-          },
-          "value" : "47821"
-        } ] ]
-      } ] ]
-    } ] ]
-  }
+        "parameters" : [ {
+          "@type" : "Value",
+          "value" : "47821",
+          "typeName" : "I64",
+          "line" : 3
+        } ],
+        "typeName" : null,
+        "line" : 3
+      } ],
+      "typeName" : null,
+      "line" : 3
+    } ],
+    "line" : 3,
+    "scope" : {
+      "@type" : "SymbolTable",
+      "variables" : { },
+      "types" : { },
+      "functions" : { }
+    }
+  },
+  "line" : 3,
+  "scope" : null
 }

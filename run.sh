@@ -5,16 +5,22 @@ dir="$(dirname $0)"
 function run_test {
     rm -rf output.*
     filename="$dir/tests/$1"
-
-    # echo $filename
+    touch ./output.ast.json
+    cd ..
     
-    outputname="$(dirname $filename)/$(basename $1 .alf).out"
+    # echo $filename
+    file=$1
+    path_with_dir="../devoir-3-tests/$filename"
+    outputname="$(dirname $filename)/$(basename $1 .alf).json"
     astoutputname="$(dirname $filename)/$(basename $1 .alf).ast.json"
     echo Running $filename
-    java -cp ./../libs/*:./../out org.example.Main $filename output.ast.json &> $outputname
+    echo $outputname
+    ./gradlew run -q --args="$path_with_dir ../devoir-3-tests/$outputname"
+
+    cd ./devoir-3-tests/
     ERROR=0
 
-    if node verify.js "$astoutputname" "output.ast.json" &> output.report;
+    if node verify.js "$astoutputname" "$outputname" &> output.report;
     then
        echo "Correct"
     else
@@ -22,7 +28,7 @@ function run_test {
         cat output.report
         echo "This is informative. The order of the properties in the JSON doesn't matter."
         echo "Your output                                                   | Correct output"
-        diff --ignore-space-change --side-by-side --suppress-common-lines "output.ast.json" "$astoutputname"
+        diff --ignore-space-change --side-by-side --suppress-common-lines "$outputname" "$astoutputname"
         ERROR=1
     fi
     rm $outputname

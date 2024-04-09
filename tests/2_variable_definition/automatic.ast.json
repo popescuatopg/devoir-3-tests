@@ -1,30 +1,35 @@
 {
-  "@class" : "org.easycompiler.ast.Module",
-  "line" : 2,
-  "title" : "program",
+  "@type" : "Module",
   "block" : {
-    "@class" : "org.easycompiler.ast.Block",
+    "@type" : "Block",
+    "statements" : [ {
+      "@type" : "Group",
+      "declarations" : [ {
+        "@type" : "VariableDefinition",
+        "variable" : {
+          "@type" : "Identifier",
+          "title" : "count",
+          "typeName" : null,
+          "line" : 2
+        },
+        "init" : {
+          "@type" : "Value",
+          "value" : "5",
+          "typeName" : "I64",
+          "line" : 2
+        },
+        "line" : 2
+      } ],
+      "line" : 2
+    } ],
     "line" : 2,
-    "type" : null,
-    "statements" : [ "java.util.ArrayList", [ {
-      "@class" : "org.easycompiler.ast.Group",
-      "line" : 2,
-      "nodes" : [ "java.util.ArrayList", [ {
-        "@class" : "org.easycompiler.ast.VariableDefinition",
-        "line" : 2,
-        "title" : "count",
-        "type" : null,
-        "initial" : {
-          "@class" : "org.easycompiler.ast.Value",
-          "line" : 2,
-          "type" : {
-            "@class" : "org.easycompiler.type.Integer",
-            "title" : "integer",
-            "type" : "I64"
-          },
-          "value" : "5"
-        }
-      } ] ]
-    } ] ]
-  }
+    "scope" : {
+      "@type" : "SymbolTable",
+      "variables" : { },
+      "types" : { },
+      "functions" : { }
+    }
+  },
+  "line" : 2,
+  "scope" : null
 }

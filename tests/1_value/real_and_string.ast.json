@@ -1,28 +1,26 @@
 {
-  "@class" : "org.easycompiler.ast.Module",
-  "line" : 3,
-  "title" : "program",
+  "@type" : "Module",
   "block" : {
-    "@class" : "org.easycompiler.ast.Block",
-    "line" : 3,
-    "type" : null,
-    "statements" : [ "java.util.ArrayList", [ {
-      "@class" : "org.easycompiler.ast.Value",
-      "line" : 3,
-      "type" : {
-        "@class" : "org.easycompiler.type.Float",
-        "title" : "float",
-        "type" : "F64"
-      },
-      "value" : "534.534"
+    "@type" : "Block",
+    "statements" : [ {
+      "@type" : "Value",
+      "value" : "534.534",
+      "typeName" : "F64",
+      "line" : 3
     }, {
-      "@class" : "org.easycompiler.ast.Value",
-      "line" : 4,
-      "type" : {
-        "@class" : "org.easycompiler.type.Str",
-        "title" : "string"
-      },
-      "value" : "this is a text"
-    } ] ]
-  }
+      "@type" : "Value",
+      "value" : "this is a text",
+      "typeName" : "String",
+      "line" : 4
+    } ],
+    "line" : 3,
+    "scope" : {
+      "@type" : "SymbolTable",
+      "variables" : { },
+      "types" : { },
+      "functions" : { }
+    }
+  },
+  "line" : 3,
+  "scope" : null
 }

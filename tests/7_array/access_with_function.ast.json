@@ -1,72 +1,88 @@
 {
-  "@class" : "org.easycompiler.ast.Module",
-  "line" : 3,
-  "title" : "program",
+  "@type" : "Module",
   "block" : {
-    "@class" : "org.easycompiler.ast.Block",
-    "line" : 3,
-    "type" : null,
-    "statements" : [ "java.util.ArrayList", [ {
-      "@class" : "org.easycompiler.ast.Definition",
-      "line" : 3,
-      "title" : "details",
-      "type" : {
-        "@class" : "org.easycompiler.type.Array",
-        "title" : null,
-        "type" : {
-          "@class" : "org.easycompiler.type.Str",
-          "title" : "string"
-        },
-        "length" : 8
-      }
-    }, {
-      "@class" : "org.easycompiler.ast.Group",
-      "line" : 5,
-      "nodes" : [ "java.util.ArrayList", [ {
-        "@class" : "org.easycompiler.ast.VariableDefinition",
-        "line" : 5,
-        "title" : "v",
-        "type" : {
-          "@class" : "org.easycompiler.type.Placeholder",
-          "title" : "details"
-        },
-        "initial" : null
-      } ] ]
-    }, {
-      "@class" : "org.easycompiler.ast.Assignment",
-      "line" : 7,
-      "to" : {
-        "@class" : "org.easycompiler.ast.ArrayElement",
-        "line" : 7,
-        "type" : null,
-        "array" : {
-          "@class" : "org.easycompiler.ast.Identifier",
-          "line" : 7,
-          "type" : null,
-          "title" : "v"
-        },
-        "index" : {
-          "@class" : "org.easycompiler.ast.FunctionCall",
-          "line" : 7,
-          "type" : null,
-          "function_name" : {
-            "@class" : "org.easycompiler.ast.Identifier",
-            "line" : 7,
-            "type" : null,
-            "title" : "position"
+    "@type" : "Block",
+    "statements" : [ {
+      "@type" : "Definition",
+      "definedType" : {
+        "@type" : "Array",
+        "title" : "details",
+        "typeName" : "string",
+        "length" : {
+          "@type" : "BinaryExpression",
+          "left" : {
+            "@type" : "Value",
+            "value" : "9",
+            "typeName" : "I64",
+            "line" : 3
           },
-          "arguments" : [ "java.util.ArrayList", [ ] ]
+          "right" : {
+            "@type" : "Value",
+            "value" : "1",
+            "typeName" : "I64",
+            "line" : 3
+          },
+          "op" : "SUB",
+          "typeName" : null,
+          "line" : 3
         }
       },
-      "from" : {
-        "@class" : "org.easycompiler.ast.Value",
-        "line" : 7,
-        "type" : {
-          "@class" : "org.easycompiler.type.Str",
-          "title" : "string"
+      "line" : 3
+    }, {
+      "@type" : "Group",
+      "declarations" : [ {
+        "@type" : "VariableDefinition",
+        "variable" : {
+          "@type" : "Identifier",
+          "title" : "v",
+          "typeName" : "details",
+          "line" : 5
         },
-        "value" : "The new name for the school"
-      }
-    } ] ]
-  }
+        "init" : null,
+        "line" : 5
+      } ],
+      "line" : 5
+    }, {
+      "@type" : "Assignment",
+      "to" : {
+        "@type" : "ArrayElement",
+        "array" : {
+          "@type" : "Identifier",
+          "title" : "v",
+          "typeName" : null,
+          "line" : 7
+        },
+        "index" : {
+          "@type" : "FunctionCall",
+          "function" : {
+            "@type" : "Identifier",
+            "title" : "position",
+            "typeName" : null,
+            "line" : 7
+          },
+          "parameters" : [ ],
+          "typeName" : null,
+          "line" : 7
+        },
+        "typeName" : null,
+        "line" : 7
+      },
+      "from" : {
+        "@type" : "Value",
+        "value" : "The new name for the school",
+        "typeName" : "String",
+        "line" : 7
+      },
+      "line" : 7
+    } ],
+    "line" : 3,
+    "scope" : {
+      "@type" : "SymbolTable",
+      "variables" : { },
+      "types" : { },
+      "functions" : { }
+    }
+  },
+  "line" : 3,
+  "scope" : null
 }

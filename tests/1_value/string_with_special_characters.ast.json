@@ -1,19 +1,21 @@
 {
-  "@class" : "org.easycompiler.ast.Module",
-  "line" : 3,
-  "title" : "program",
+  "@type" : "Module",
   "block" : {
-    "@class" : "org.easycompiler.ast.Block",
+    "@type" : "Block",
+    "statements" : [ {
+      "@type" : "Value",
+      "value" : "this is a string with with special chacaraters \" \\ \n \r ",
+      "typeName" : "String",
+      "line" : 3
+    } ],
     "line" : 3,
-    "type" : null,
-    "statements" : [ "java.util.ArrayList", [ {
-      "@class" : "org.easycompiler.ast.Value",
-      "line" : 3,
-      "type" : {
-        "@class" : "org.easycompiler.type.Str",
-        "title" : "string"
-      },
-      "value" : "this is a string with with special chacaraters \" \\ \n \r "
-    } ] ]
-  }
+    "scope" : {
+      "@type" : "SymbolTable",
+      "variables" : { },
+      "types" : { },
+      "functions" : { }
+    }
+  },
+  "line" : 3,
+  "scope" : null
 }

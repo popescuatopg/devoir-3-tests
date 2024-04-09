@@ -1,43 +1,58 @@
 {
-  "@class" : "org.easycompiler.ast.Module",
-  "line" : 3,
-  "title" : "program",
+  "@type" : "Module",
   "block" : {
-    "@class" : "org.easycompiler.ast.Block",
-    "line" : 3,
-    "type" : null,
-    "statements" : [ "java.util.ArrayList", [ {
-      "@class" : "org.easycompiler.ast.Definition",
-      "line" : 3,
-      "title" : "print",
-      "type" : {
-        "@class" : "org.easycompiler.type.Function",
-        "title" : null,
-        "parameters" : [ "java.util.ArrayList", [ {
-          "@class" : "org.easycompiler.ast.Property",
-          "line" : 3,
-          "type" : {
-            "@class" : "org.easycompiler.type.Str",
-            "title" : "string"
-          },
+    "@type" : "Block",
+    "statements" : [ {
+      "@type" : "Definition",
+      "definedType" : {
+        "@type" : "Function",
+        "title" : "print",
+        "parameters" : [ {
+          "@type" : "Property",
           "title" : "text",
-          "value" : null
-        } ] ],
+          "typeName" : "string",
+          "defaultValue" : null,
+          "line" : 3
+        } ],
         "statements" : {
-          "@class" : "org.easycompiler.ast.Block",
-          "line" : 4,
-          "type" : null,
-          "statements" : [ "java.util.ArrayList", [ {
-            "@class" : "org.easycompiler.ast.Empty",
+          "@type" : "Block",
+          "statements" : [ {
+            "@type" : "Block",
+            "statements" : [ ],
             "line" : 5,
-            "type" : null
-          } ] ]
+            "scope" : {
+              "@type" : "SymbolTable",
+              "variables" : { },
+              "types" : { },
+              "functions" : { }
+            }
+          } ],
+          "line" : 4,
+          "scope" : {
+            "@type" : "SymbolTable",
+            "variables" : { },
+            "types" : { },
+            "functions" : { }
+          }
         },
-        "returnType" : {
-          "@class" : "org.easycompiler.type.Str",
-          "title" : "string"
+        "returnTypeName" : "string",
+        "scope" : {
+          "@type" : "SymbolTable",
+          "variables" : { },
+          "types" : { },
+          "functions" : { }
         }
-      }
-    } ] ]
-  }
+      },
+      "line" : 3
+    } ],
+    "line" : 3,
+    "scope" : {
+      "@type" : "SymbolTable",
+      "variables" : { },
+      "types" : { },
+      "functions" : { }
+    }
+  },
+  "line" : 3,
+  "scope" : null
 }

@@ -1,51 +1,54 @@
 {
-  "@class" : "org.easycompiler.ast.Module",
-  "line" : 4,
-  "title" : "program",
+  "@type" : "Module",
   "block" : {
-    "@class" : "org.easycompiler.ast.Block",
-    "line" : 4,
-    "type" : null,
-    "statements" : [ "java.util.ArrayList", [ {
-      "@class" : "org.easycompiler.ast.Definition",
-      "line" : 4,
-      "title" : "_sum",
-      "type" : {
-        "@class" : "org.easycompiler.type.Function",
-        "title" : null,
-        "parameters" : [ "java.util.ArrayList", [ {
-          "@class" : "org.easycompiler.ast.Property",
-          "line" : 4,
-          "type" : {
-            "@class" : "org.easycompiler.type.Integer",
-            "title" : "integer",
-            "type" : "I64"
-          },
+    "@type" : "Block",
+    "statements" : [ {
+      "@type" : "Definition",
+      "definedType" : {
+        "@type" : "Function",
+        "title" : "_sum",
+        "parameters" : [ {
+          "@type" : "Property",
           "title" : "n1",
-          "value" : null
+          "typeName" : "I64",
+          "defaultValue" : null,
+          "line" : 4
         }, {
-          "@class" : "org.easycompiler.ast.Property",
-          "line" : 4,
-          "type" : {
-            "@class" : "org.easycompiler.type.Integer",
-            "title" : "integer",
-            "type" : "I64"
-          },
+          "@type" : "Property",
           "title" : "n2",
-          "value" : null
-        } ] ],
+          "typeName" : "I64",
+          "defaultValue" : null,
+          "line" : 4
+        } ],
         "statements" : {
-          "@class" : "org.easycompiler.ast.Block",
+          "@type" : "Block",
+          "statements" : [ ],
           "line" : 4,
-          "type" : null,
-          "statements" : [ "java.util.ArrayList", [ ] ]
+          "scope" : {
+            "@type" : "SymbolTable",
+            "variables" : { },
+            "types" : { },
+            "functions" : { }
+          }
         },
-        "returnType" : {
-          "@class" : "org.easycompiler.type.Integer",
-          "title" : "integer",
-          "type" : "I64"
+        "returnTypeName" : "I64",
+        "scope" : {
+          "@type" : "SymbolTable",
+          "variables" : { },
+          "types" : { },
+          "functions" : { }
         }
-      }
-    } ] ]
-  }
+      },
+      "line" : 4
+    } ],
+    "line" : 4,
+    "scope" : {
+      "@type" : "SymbolTable",
+      "variables" : { },
+      "types" : { },
+      "functions" : { }
+    }
+  },
+  "line" : 4,
+  "scope" : null
 }

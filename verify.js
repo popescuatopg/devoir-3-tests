@@ -16,6 +16,7 @@ try
 }
 catch (e)
 {
+	console.log(e.message)
 	console.error ('Cannot load original AST from '+originalFile);
 	process.exit (-1);
 }
@@ -27,6 +28,7 @@ try
 }
 catch (e)
 {
+	console.error(e.message + e)
 	console.error ('Cannot load AST from '+verifyFile);
 	process.exit (-1);
 }
