@@ -1,11 +1,13 @@
-[ {
-  "id" : "Syntax Error",
-  "line" : 6,
-  "charPosition" : 2,
-  "msg" : "no viable alternative at input 'n++'"
-}, {
-  "id" : "Lexical Error",
-  "line" : 7,
-  "charPosition" : 2,
-  "msg" : "token recognition error at: '~'"
-} ]
+{
+  "errors": [ {
+    "id" : "Syntax Error",
+    "line" : 6,
+    "charPosition" : 2,
+    "msg" : "no viable alternative at input 'n++'"
+  }, {
+    "id" : "Lexical Error",
+    "line" : 7,
+    "charPosition" : 2,
+    "msg" : "token recognition error at: '~'"
+  } ]
+}

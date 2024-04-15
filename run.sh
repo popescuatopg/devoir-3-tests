@@ -29,6 +29,7 @@ function run_test {
         echo "This is informative. The order of the properties in the JSON doesn't matter."
         echo "Your output                                                   | Correct output"
         diff --ignore-space-change --side-by-side --suppress-common-lines "$outputname" "$astoutputname"
+        printf "\n"
         ERROR=1
     fi
     rm $outputname
