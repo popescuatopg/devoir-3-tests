@@ -1,6 +1,8 @@
-[ {
-  "id" : "Lexical Error",
-  "line" : 2,
-  "charPosition" : 0,
-  "msg" : "token recognition error at: '^'"
-} ]
+{
+  "errors": [ {
+    "id" : "Lexical Error",
+    "line" : 2,
+    "charPosition" : 0,
+    "msg" : "token recognition error at: '^'"
+  } ]
+}
